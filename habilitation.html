@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mon compte</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    </head>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Frontend</a><i class="bi bi-border-inner"></i>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="https://github.com/marilehoux"><!--img src="./node_modules/bootstrap-icons/icons/github.svg"--> Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">API</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./moncompte.html">Mon compte</a></li>
+                            <li><a class="dropdown-item" href="./planning.html">Planning individuel</a></li>
+                            <li><a class="dropdown-item" href="./modale.html">Profil utilisateur</a></li>
+                            <li><a class="dropdown-item" href="./absence.html">Absence</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Inactif</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <span><i class="bi bi-search"></i></span><input class="form-control me-2" type="search" placeholder="" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Recherche</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <body>
+        
+    
+            <div>
+                <!-- <div class="card m-4">
+                    <h2>Liste des personnels Habilitation H1</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Validité (3 ans)</th>
+                                    <th>Echéance</th>
+                                    <th>KN sous</th>
+                                    <th>Deadline</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td >Kevin LEHOUX</td>
+                                <td>
+                                    <div class="progress" style="height:20px" >
+                                        <div class="progress-bar bg-warning" style="width: 15%;"></div>
+                                    </div>
+                                </td>
+                                <td >10.08.2023</td>
+                                <td>
+                                    <div class="progress" style="height:20px" >
+                                        <div class="progress-bar bg-danger" style="width: 10%">10 jours</div>
+                                    
+                                    </div>
+                                </td>
+                                    <td>25.04.2023</td>
+                                </tr>
+                                <tr>
+                                    <td >Roger LEHOUX</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 20%;"></div>
+                                        </div>
+                                    </td>
+                                    <td >20.09.2023</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-" style="width: 70%;">70 jours</div>
+                                        </div>
+                                    </td>
+                                    <td>20.06.2023</td>
+                                </tr>
+                                <tr>
+                                    <td >Bernard LEHOUX</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 25%;"></div>
+                                        </div>
+                                    </td>
+                                    <td >08.01.2024</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-danger" style="width:25%;">25 jours</div>
+                                        </div>
+                                    </td>
+                                    <td>05.05.2023</td>
+                                </tr>
+                                <tr>
+                                    <td >Mohamed LEHOUX</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 50%;"></div>
+                                        </div>
+                                    </td>
+                                    <td >07.06.2024</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 75%;">60 jours</div>
+                                        </div>
+                                    </td>
+                                    <td>10.06.2023</td>
+                                </tr>
+                                <tr>
+                                    <td >Jules LEHOUX</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 60%;"></div>
+                                        </div>
+                                    </td>
+                                    <td >27.09.2024</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-success" style="width: 85%;">85 jours</div>
+                                        </div>
+                                    </td>
+                                    <td>02.07.2023</td>
+                                </tr>
+                                <tr>
+                                    <td >Guillaume LEHOUX</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-success" style="width: 80%;"></div>
+                                        </div>
+                                    </td>
+                                    <td >11.02.2025</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-warning" style="width: 45%;">45 jours</div>
+                                        </div>
+                                    </td>
+                                    <td>22.05.2023</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> -->
+        <!-- finV1 -->
+                    
+        <!-- v2 -->
+                   
+        <!-- finV2 -->
+                        
+        <!-- V3 -->
+                <!-- <div class="card m-4">
+                    <h2 class="card-header">Liste des personnels Habilitation H3</h2>
+                        <table class="table">
+                            <thead>
+                                <tr >
+                                    <th >Nom</th>
+                                    <th>Validité (3 ans)</th>
+                                    <th>Echéance</th>
+                                    <th>résultats</th>
+                                    <th class="text-center">prochain controle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Kevin LEHOUX</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-info" style="width: 15%;"></div>
+                                        </div>
+                                    </td>
+                                    <td >10.08.2023</td>
+                                    <td>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                    </td>
+                                        <td class="table-danger text-center">25.04.2023</td>
+                                    </tr>
+                                <tr>
+                                    <td >Roger LEHOUX</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-info" style="width: 20%;"></div>
+                                        </div>
+                                    </td>
+                                    <td >20.09.2023</td>
+                                    <td>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                    </td>
+                                    <td class="text-center">20.06.2023</td>
+                                </tr>
+                                <tr>
+                                    <td >Bernard LEHOUX</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-info" style="width: 25%;"></div>
+                                        </div>
+                                    </td>
+                                    <td >08.01.2024</td>
+                                    <td>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-warning me-1">M</span>
+                                        <span class="badge bg-success me-1"></span>
+                                        <span class="badge bg-success me-1"></span>
+                                    </td>
+                                    <td class="table-danger text-center">05.05.2023</td>
+                                </tr>
+                                <tr>
+                                    <td >Mohamed LEHOUX</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-info" style="width: 50%;"></div>
+                                        </div>
+                                    </td>
+                                    <td >07.06.2024</td>
+                                    <td>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-warning me-1">M</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-primary me-1"></span>
+                                        <span class="badge bg-success me-1"></span>
+                                        <span class="badge bg-success me-1"></span>
+                                    </td>
+                                    <td class="text-center">10.06.2023</td>
+                                </tr>
+                                <tr>
+                                    <td >Jules LEHOUX</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-info" style="width: 60%;"></div>
+                                        </div>
+                                    </td>
+                                    <td >27.09.2024</td>
+                                    <td>
+                                        <span class="badge bg-warning me-1">M</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1"></span>
+                                        <span class="badge bg-success me-1"></span>
+                                        <span class="badge bg-success me-1"></span>
+                                    </td>
+                                    <td class="text-center">02.07.2023</td>
+                                </tr>
+                                <tr>
+                                    <td >Guillaume LEHOUX</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-info" style="width: 80%;"></div>
+                                        </div>
+                                    </td>
+                                    <td >11.02.2025</td>
+                                    <td>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge">S</span>
+                                        <span class="badge"></span>
+                                        <span class="badge"></span>
+                                    </td>
+                                    <td class="table-warning text-center">22.05.2023</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> -->
+        <!-- finV3 -->
+        <!-- V4 -->
+                    <div class="card m-4">
+                    <h2 class="card-header">Liste des personnels habilités H4</h2>
+                        <table class="table">
+                            <thead>
+                                <tr >
+                                    <th >Nom</th>
+                                    <th>Validité ( 3 ans)</th>
+                                    <th>Echéance</th>
+                                    <th>contrôles</th>
+                                    <th>Veille :</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John DOE</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 85%;">reste 16 sem.</div>
+                                        </div>
+                                    </td>
+                                    <td >10.08.2023</td>
+                                    <td>
+                                        <span class="badge bg-warning me-1">M</span>
+                                        <span class="badge bg-warning me-1">M</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-danger" style="width: 90%">10 jours</div>
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >Mika DOE</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 80%;">reste 5 mois</div>
+                                        </div>
+                                    </td>
+                                    <td >20.09.2023</td>
+                                    <td>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-danger" style="width:85%;">15 jours</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >Liby DOE</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 75%;">reste 9 mois</div>
+                                        </div>
+                                    </td>
+                                    <td >08.01.2024</td>
+                                    <td>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-warning me-1">M</span>
+                                        <span class="badge bg-success me-1"></span>
+                                        <span class="badge bg-success me-1"></span>
+                                    </td>
+                                    <td>
+                                        <div class="badge" >
+                                            <div class="text-danger" > ! Bouclage reste 7 jours</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >Pseu DOE</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 50%;">reste 18 mois</div>
+                                        </div>
+                                    </td>
+                                    <td >07.06.2024</td>
+                                    <td>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-warning me-1">M</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-primary me-1"></span>
+                                        <span class="badge bg-success me-1"></span>
+                                        <span class="badge bg-success me-1"></span>
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-warning" style="width: 60%;">5 sem.</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >Quasi-Mo DOE</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 60%;">reste 17 mois</div>
+                                        </div>
+                                    </td>
+                                    <td >27.09.2024</td>
+                                    <td>
+                                        <span class="badge bg-warning me-1">M</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1"></span>
+                                        <span class="badge bg-success me-1"></span>
+                                        <span class="badge bg-success me-1"></span>
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-success" style="width: 25%;">10 sem.</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >Aïki DOE</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 20%;"></div>
+                                        </div>
+                                    </td>
+                                    <td >11.02.2025</td>
+                                    <td>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-warning me-1">M</span>
+                                        <span class="badge bg-secondary me-1">?</span>
+                                        <span class="badge"></span>
+                                    </td>
+                                    <td>
+                                        <div class="badge" >
+                                            <div class="text-warning" >Bouclage programmé</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+        <!-- finv4 -->
+        
+        <!-- v1 opérateur -->
+        <div class="card m-4">
+                    <h2 class="card-header">Liste des habilitations de John DOE</h2>
+                    <table class="table">
+                            <thead>
+                                <tr >
+                                    <th >Nom</th>
+                                    <th>Validité ( 3 ans)</th>
+                                    <th>Echéance</th>
+                                    <th>10 derniers contrôles</th>
+                                    <th>Prochain KN sous :</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Habilitation H1</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 20%;"></div>
+                                        </div>
+                                    </td>
+                                    <td >11.02.2025</td>
+                                    <td>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge">S</span>
+                                        <span class="badge"></span>
+                                        <span class="badge"></span>
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 45%;">8 sem</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >Habilitation H2</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 80%;">reste 20 sem.</div>
+                                        </div>
+                                    </td>
+                                    <td >20.09.2023</td>
+                                    <td>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-danger" style="width:85%;">15 jours</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >Habilitation H3</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 70%;">reste 9 mois</div>
+                                        </div>
+                                    </td>
+                                    <td >08.01.2024</td>
+                                    <td>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-warning me-1">M</span>
+                                        <span class="badge bg-warning me-1">M</span>
+        
+                                        <span class="badge bg-warning me-1">M</span>
+                                        <span class="badge bg-success me-1"></span>
+                                        <span class="badge bg-success me-1"></span>
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 50%;">7 sem.</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >Habilitation H4</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 85%;">reste 16 sem.</div>
+                                        </div>
+                                    </td>
+                                    <td >10.08.2023</td>
+                                    <td>
+                                        <span class="badge bg-warning me-1">M</span>
+                                        <span class="badge bg-warning me-1">M</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-danger" style="width: 90%">10 jours</div>
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >Habilitation H5</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 60%;">reste 15 mois</div>
+                                        </div>
+                                    </td>
+                                    <td >27.09.2024</td>
+                                    <td>
+                                        <span class="badge bg-warning me-1">M</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-success me-1">S</span>
+                                        <span class="badge bg-success me-1"></span>
+                                        <span class="badge bg-success me-1"></span>
+                                        <span class="badge bg-success me-1"></span>
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-success" style="width: 25%;">10 sem.</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >Habilitation H6</td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 25%;"></div>
+                                        </div>
+                                    </td>
+                                    <td >11.02.2025</td>
+                                    <td>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge bg-primary me-1">A</span>
+                                        <span class="badge">S</span>
+                                        <span class="badge"></span>
+                                        <span class="badge"></span>
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height:20px" >
+                                            <div class="progress-bar bg-primary" style="width: 45%;">8 sem</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+        
+        <!-- fin v1 opérateur -->
+        
+                    <br><br>
+                    <br><br>
+                    <br><br>
+                    <br><br>
+                    <br><br>
+                    <br><br>
+                    <br><br>
+                    <br>
+                <h3 class="m-3"> Habilitation TES D - HMT SEG Niveau 1</h3>
+                <div class="card">
+                    <div class="card-header">
+                        <h4 >
+                            KN SE HMT1 Détonateur
+                        </h4>
+                        <div>
+                            <span class="badge bg-warning">controle à programmer avant le 12/05/2023</span>
+                            </div>
+        
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <div>
+                                <span class="badge bg-success fs-6">S</span>
+                            </div>
+                            <div>
+                                <span>#542 du 13/02/2002</span>
+                            </div>
+                            <div class="btn-group progress progress-ht mb-2 mx-1 ">
+                                <div class="btn progress-bar bg-success" role="progressbar" style="width: 45%" >12</div>
+                                <div class="btn progress-bar bg-primary" role="progressbar" style="width: 30%" >6</div>
+                                <div class="btn progress-bar bg-warning" role="progressbar" style="width: 20%" >4</div>
+                                <div class="btn progress-bar bg-danger" role="progressbar" style="width: 5%" >2</div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <span class="badge bg-success fs-6">S</span>
+                            </div>
+                            <div>
+                                <span>#542 du 13/02/2002</span>
+                            </div>
+                             <div class="btn-group progress progress-ht mb-2 mx-1 ">
+                                <div class="btn progress-bar bg-success" role="progressbar" style="width: 45%" >8</div>
+                                <div class="btn progress-bar bg-primary" role="progressbar" style="width: 30%" >6</div>
+                                <div class="btn progress-bar bg-warning" role="progressbar" style="width: 20%" >4</div>
+                                <div class="btn progress-bar bg-danger" role="progressbar" style="width: 6%" >2</div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <span class="badge bg-success fs-6">S</span>
+                            </div>
+                            <div>
+                                <span>#542 du 13/02/2002</span>
+                            </div>
+                             <div class="btn-group progress progress-ht mb-2 mx-1 ">
+                                <div class="btn progress-bar bg-success" role="progressbar" style="width: 80%" >8</div>
+                                <div class="btn progress-bar bg-primary" role="progressbar" style="width: 10%" >1</div>
+                                <div class="btn progress-bar bg-warning" role="progressbar" style="width: 10%" >1</div>
+                                <!-- <div class="btn progress-bar bg-danger" role="progressbar" style="width: 0%" >0</div> -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                    <div class="card-header">
+                        <h4 >
+                            KN SE HMT1 KVB
+                        </h4>
+                        <div>
+                            <span class="badge bg-danger">controle à programmer avant le 12/05/2023</span>
+                            </div>
+        
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-baseline">
+                            <div>
+                                <span class="badge bg-success fs-6">S</span>
+                            </div>
+                            <div>
+                                <span>#542 du 13/02/2002</span>
+                            </div>
+                            <div class="btn-group progress progress-ht mb-2 mx-1 ">
+                                <div class="btn progress-bar bg-success" role="progressbar" style="width: 45%" >12</div>
+                                <div class="btn progress-bar bg-primary" role="progressbar" style="width: 30%" >6</div>
+                                <div class="btn progress-bar bg-warning" role="progressbar" style="width: 20%" >4</div>
+                                <div class="btn progress-bar bg-danger" role="progressbar" style="width: 5%" >2</div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <span class="badge bg-success fs-6">S</span>
+                            </div>
+                            <div>
+                                <span>#542 du 13/02/2002</span>
+                            </div>
+                             <div class="btn-group progress progress-ht mb-2 mx-1 ">
+                                <div class="btn progress-bar bg-success" role="progressbar" style="width: 45%" >8</div>
+                                <div class="btn progress-bar bg-primary" role="progressbar" style="width: 30%" >6</div>
+                                <div class="btn progress-bar bg-warning" role="progressbar" style="width: 20%" >4</div>
+                                <div class="btn progress-bar bg-danger" role="progressbar" style="width: 6%" >2</div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <span class="badge bg-success fs-6">S</span>
+                            </div>
+                            <div>
+                                <span>#542 du 13/02/2002</span>
+                            </div>
+                             <div class="btn-group progress progress-ht mb-2 mx-1 ">
+                                <div class="btn progress-bar bg-success" role="progressbar" style="width: 80%" >8</div>
+                                <div class="btn progress-bar bg-primary" role="progressbar" style="width: 10%" >1</div>
+                                <div class="btn progress-bar bg-warning" role="progressbar" style="width: 10%" >1</div>
+                                <!-- <div class="btn progress-bar bg-danger" role="progressbar" style="width: 0%" >0</div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
+                </div>
+                
+            
+                <h2 class="card-header">Contrôleur 1</h2>
+                <div class="row g-2 m-2">
+                    <div class="card col-md-4">
+                        <h3 >Tous les contrôles</h3>
+                        <div class="mx-1">Répartition sur Évaluations générales</div>
+                        <div class="btn-group progress progress-ht mb-2 mx-1 ">
+                            <div class="btn progress-bar bg-success" role="progressbar" style="width: 45%" >8</div>
+                            <div class="btn progress-bar bg-primary" role="progressbar" style="width: 30%" >6</div>
+                            <div class="btn progress-bar bg-warning" role="progressbar" style="width: 20%" >4</div>
+                            <div class="btn progress-bar bg-danger" role="progressbar" style="width: 6%" >2</div>
+                        </div>
+                        <div class="mx-1">Répartition sur Toutes les réponses</div>
+                        <div class="btn-group progress progress-ht mb-2 mx-1">
+                            <div class="btn progress-bar bg-success" role="progressbar" style="width: 76%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">900</div>
+                            <div class="btn progress-bar bg-primary" role="progressbar" style="width: 8%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">100</div>
+                            <div class="btn progress-bar bg-warning" role="progressbar" style="width: 8%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">100</div>
+                            <div class="btn progress-bar bg-danger" role="progressbar" style="width: 8%">10</div>
+                        </div>
+                        <div class="d-flex align-items-center mx-1 mb-1">Répartition <span class="badge bg-info mx-1">évalués</span>/<span class="badge bg-secondary mx-1">non évalués</span></div>
+                        <div class="btn-group progress progress-ht mb-2 mx-1">
+                            <div class="btn progress-bar bg-info" role="progressbar" style="width: 94%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">11</div>
+                            <div class="btn progress-bar bg-secondary" role="progressbar" style="width: 8%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">1</div>
+                        </div>
+                     </div>
+                    </div>
+                    <div class="row m-2">
+                        
+                        <div class="card col-md-4 me-2">
+                            <h3>Questionnaire 1</h3>
+                            <div class="mx-1">Répartition sur Évaluations générales</div>
+                            <div class="btn-group progress progress-ht mb-2 mx-1 ">
+                                <div class="btn progress-bar bg-success" role="progressbar" style="width: 45%" >8</div>
+                                <div class="btn progress-bar bg-primary" role="progressbar" style="width: 30%" >6</div>
+                                <div class="btn progress-bar bg-warning" role="progressbar" style="width: 20%" >4</div>
+                                <div class="btn progress-bar bg-danger" role="progressbar" style="width: 6%" >2</div>
+                            </div>
+                            <div class="mx-1">Répartition sur Toutes les réponses</div>
+                            <div class="btn-group progress progress-ht mb-2 mx-1">
+                                <div class="btn progress-bar bg-success" role="progressbar" style="width: 76%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">900</div>
+                                <div class="btn progress-bar bg-primary" role="progressbar" style="width: 8%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">100</div>
+                                <div class="btn progress-bar bg-warning" role="progressbar" style="width: 8%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">100</div>
+                                <div class="btn progress-bar bg-danger" role="progressbar" style="width: 8%">10</div>
+                            </div>
+                            <div class="d-flex align-items-center mx-1 mb-1">Répartition <span class="badge bg-info mx-1">évalués</span>/<span class="badge bg-secondary mx-1">non évalués</span></div>
+                            <div class="btn-group progress progress-ht mb-2 mx-1">
+                                <div class="btn progress-bar bg-info" role="progressbar" style="width: 94%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">11</div>
+                                <div class="btn progress-bar bg-secondary" role="progressbar" style="width: 8%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">1</div>
+                            </div>
+                        </div>
+                        <div class="card col-md-4">
+                            <h3>Questionnaire 2</h3>
+                            
+                            <div class="mx-1">Répartition sur Évaluations générales</div>
+                            <div class="btn-group progress progress-ht mb-2 mx-1 ">
+                                <div class="btn progress-bar bg-success" role="progressbar" style="width: 45%" >8</div>
+                                <div class="btn progress-bar bg-primary" role="progressbar" style="width: 30%" >6</div>
+                                <div class="btn progress-bar bg-warning" role="progressbar" style="width: 20%" >4</div>
+                                <div class="btn progress-bar bg-danger" role="progressbar" style="width: 6%" >2</div>
+                            </div>
+                            <div class="mx-1">Répartition sur Toutes les réponses</div>
+                            <div class="btn-group progress progress-ht mb-2 mx-1">
+                            <div class="btn progress-bar bg-success" role="progressbar" style="width: 76%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">900</div>
+                            <div class="btn progress-bar bg-primary" role="progressbar" style="width: 8%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">100</div>
+                            <div class="btn progress-bar bg-warning" role="progressbar" style="width: 8%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">100</div>
+                            <div class="btn progress-bar bg-danger" role="progressbar" style="width: 8%">10</div>
+                        </div>
+                        <div class="d-flex align-items-center mx-1 mb-1">Répartition <span class="badge bg-info mx-1">évalués</span>/<span class="badge bg-secondary mx-1">non évalués</span></div>
+                        <div class="btn-group progress progress-ht mb-2 mx-1">
+                            <div class="btn progress-bar bg-info" role="progressbar" style="width: 94%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">11</div>
+                            <div class="btn progress-bar bg-secondary" role="progressbar" style="width: 8%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">1</div>
+                        </div>
+                    </div>
+                </div>
+        
+        
+     
+    </body>
+</html>
